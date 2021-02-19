@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout, Main } from "../../components";
+import { Layout, Main } from "../../../../../components";
 import { Header } from "./components";
 
 const Tasks = () => {
@@ -8,13 +8,13 @@ const Tasks = () => {
         <Layout>
             <Main>
                 <Header>
-                    
+
                 </Header>
             </Main>
-            
+
         </Layout>
-        )
-    
+    )
+
 }
 
-export {Tasks}
+export { Tasks }

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./form.scss"
+import { apiTask } from '../../api.js'
 
-import { api } from '../../../../utils'
 
 const Form = () => {
 
-    const [task, setTask] = useState({})
     const [title, setTitle] = useState("")
     const [date, setDate] = useState("")
     const [description, setDescription] = useState("")
@@ -13,17 +12,16 @@ const Form = () => {
 
     const submitForm = (e) => {
         e.preventDefault()
-        setTask({
+        apiTask.post({
             title: title,
             date: date,
             description: description,
             assigned: assigned
-        });
-        console.log(task)
+        })
     }
 
     return (
-        <form onSubmit={(e) => submitForm(e)}>
+        <form onSubmit={submitForm}>
             <input type="text" name="title" onChange={(e) => setTitle(e.target.value)} ></input>
             <input type="date" name="date" onChange={(e) => setDate(e.target.value)}></input>
             <textarea name="description" onChange={(e) => setDescription(e.target.value)}></textarea>

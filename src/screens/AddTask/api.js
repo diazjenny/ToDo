@@ -1,9 +1,9 @@
 import { api } from "../../utils"
 
-const post = () => {
+const post = (data) => {
 
-    api.post()
+    api.post(data)
 
 }
 
-export const apiTask =  { post }
+export const apiTask = { post }
