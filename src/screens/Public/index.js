@@ -8,8 +8,8 @@ export const Public = () => {
     return (
         <Router>
             <Switch>
-                <Route path="/" component={Login} />
                 <Route path="/sign-up" component={SignUp} />
+                <Route path="/" component={Login} />
             </Switch>
         </Router>
     );

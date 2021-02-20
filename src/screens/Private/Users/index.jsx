@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Layout, Main } from "../../../components";
-import { usersApi } from "./api";
+import { usersApi } from "./components/api";
 import { User } from "./components";
 
 export const Users = () => {
