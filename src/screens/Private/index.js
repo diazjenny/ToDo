@@ -1,17 +1,16 @@
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { AddTask, Tasks, Ejemplo } from "./screens"
+import { Tasks } from "./Tasks"
+import { Users } from './Users'
 
 
-const Private = () => {
+export const Private = () => {
     return (
         <Router>
             <Switch>
-                <Route path="/tasks" component={Task} />
-                <Route path="/user" component={User} />
-                {/* <Route path="/" component={List} /> */}
+                <Route path="/tasks" component={Tasks} />
+                <Route path="/user" component={Users} />
             </Switch>
         </Router>
     );
 };
-
-export { Private }

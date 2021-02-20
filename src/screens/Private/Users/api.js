@@ -1,5 +1,5 @@
-import { api } from "../../utils";
-import { objectToArray } from "../../helpers";
+import { api } from "../../../utils";
+import { objectToArray } from "../../../helpers";
 
 const get = async () => {
   const response = await api.get("/users.json");
@@ -10,6 +10,6 @@ const post = () => {
   return null;
 };
 
-const like = () => {};
+const like = () => { };
 
 export const usersApi = { get, post, like };
